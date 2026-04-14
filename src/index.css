@@ -6,9 +6,6 @@
   --font-bodoni: "Bodoni Moda", serif;
   --font-outfit: "Outfit", sans-serif;
   
-  --background-hero-banner: url("./assets/banner.jpg");
-  --image-hero-banner: url("./assets/banner.jpg");
-
   --animate-fade-in-up: fade-in-up 1s ease-out forwards;
   --animate-subtle-zoom: subtle-zoom 20s ease-out infinite alternate;
   --animate-fade-in-delay: fade-in 1s ease-out 0.5s forwards opacity-0;

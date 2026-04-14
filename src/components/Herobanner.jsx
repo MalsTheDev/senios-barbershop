@@ -1,4 +1,5 @@
 import React from 'react';
+import HeroImg from '../assets/hero.jpg';
 
 export default function Herobanner() {
   return (
@@ -6,8 +7,8 @@ export default function Herobanner() {
       {/* Background with parallax effect and overlay */}
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute inset-0 bg-[url('./src/assets/hero.jpg')] bg-cover bg-center bg-no-repeat animate-subtle-zoom"
-          style={{ backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(7,7,7,1)), url("./src/assets/hero.jpg")' }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-subtle-zoom"
+          style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(7,7,7,1)), url(${HeroImg})` }}
         />
         <div className="absolute inset-0 bg-black/30" />
       </div>
