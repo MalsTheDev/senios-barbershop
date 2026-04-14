@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Outfit:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-bodoni: "Bodoni Moda", serif;
+  --font-outfit: "Outfit", sans-serif;
+  
+  --background-hero-banner: url("./assets/banner.jpg");
+  --image-hero-banner: url("./assets/banner.jpg");
+
+  --animate-fade-in-up: fade-in-up 1s ease-out forwards;
+  --animate-subtle-zoom: subtle-zoom 20s ease-out infinite alternate;
+  --animate-fade-in-delay: fade-in 1s ease-out 0.5s forwards opacity-0;
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes subtle-zoom {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  :root {
+    --color-bg-main: #070707;
+  }
+  
+  * {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg-main);
+    color: white;
+    font-family: var(--font-outfit);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1d1d1d;
+    border-radius: 5px;
+}
+
+@layer utilities {
+    .font-outline-2 {
+      -webkit-text-stroke: 1px white;
+    }
+
+    .boxshadow {
+        box-shadow: 0 0 5px #ffffff,
+        0 0 15px #ffffff,
+        0 0 25px #ffffff,
+        0 0 50px
+    }
+
+    .link {
+        @apply uppercase tracking-[4px] text-[16px] border-2 border-[#ffffff] px-[22px] py-[7px] rounded-sm;
+        box-shadow: 0 0 5px #ffffff, 0 0 15px #ffffff;
+    }
+
+    .opacity-0 {
+        opacity: 0;
+    }
+}
